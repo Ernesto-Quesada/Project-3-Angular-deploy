@@ -1,0 +1,17 @@
+<div *ngIf='agencyToDetails'>
+  <h2>{{agencyToDetails.nameAgency}} details!</h2>
+  <div>
+    <label>id: </label>{{agencyToDetails.email}}</div>
+  <div>
+    <div *ngIf='user'>
+    <form method='post'  >
+            <input type="radio" name="selectedAgency" value="selected">
+            <input type="submit" value="Select">
+    </form>      
+    </div>
+<!--    <label>name: </label>
+    <input [(ngModel)]="agency.nameAgency" placeholder="name" />
+   </div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="save()">Save</button>-->
+</div>

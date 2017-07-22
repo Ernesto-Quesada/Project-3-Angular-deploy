@@ -1,0 +1,21 @@
+
+  <div class="row well" [routerLink]="['/profile']" >
+
+      
+        <div class="panel-heading">
+          <h3 class="panel-title"> {{user.theUserProfile.firstName}}</h3>
+          <h5 class="panel-title"> {{user.theUserProfile.email}}</h5>
+          
+        </div>
+                    
+        <div class="panel-body">
+          
+          <fieldset>
+            <div class="panel-heading">
+              <h3 class="panel-title">You are currently using <b>{{user.theUserProfile.agencyInUseId.nameAgency}}</b> agency</h3>
+            </div>
+          </fieldset>
+        </div>
+    
+   
+  </div>

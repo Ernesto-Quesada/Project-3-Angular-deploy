@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel-group" id="accordion" >
+
+    <div class="panel panel-default" *ngFor="let relative of relatives">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a  (click)="onSelect(relative)"  data-toggle="collapse" data-parent="#accordion" href="#{{relative._id}}">{{relative.name}}</a>
+        </h4>
+         <div *ngIf='user'>
+    <form method='post'  >
+            <input type="radio" name="selectedAgency" value="selected">
+            <input type="submit" value="Select">
+    </form>      
+    </div>
+      </div>
+      <div id="{{relative._id}}" class="panel-collapse collapse">
+        <!--<div class="panel-body"><app-agency-details [agencyToDetails]="selectedAgency"></app-agency-details></div>-->
+        <div class="panel-body"><app-relative [relativeToDetails]="selectedRelative"></app-relative></div>
+      </div>
+    </div>
+   </div>
+  </div>
+</div>

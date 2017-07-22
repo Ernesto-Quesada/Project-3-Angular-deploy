@@ -1,0 +1,87 @@
+<!--<h2>list of agencies</h2>
+<div>
+  <label>Agency name:</label> <input #agencyName />
+  <button (click)="add(agencyName.value); agencyName.value=''">
+    Add
+  </button>
+</div>
+<ul class="agencies">
+  <li *ngFor="let agency of agencies" (click)="onSelect(agency)"[class.selected]="agency === selectedagency">
+    <span class="badge">{{agency.email}}</span>
+    <span>{{agency.nameAgency}}</span>
+    <button class="delete"
+      (click)="delete(agency); $event.stopPropagation()"> x </button>
+  </li>
+</ul>
+<div *ngIf="selectedAgency">
+  <h2>
+    {{selectedAgency.nameAgency | uppercase}} is my agency
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+  <button (click)="agencyIsSelected()">console view</button>
+</div>-->
+
+<!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Agencies</h1>
+                
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">One Column Portfolio</li>
+                </ol>
+            </div>
+        </div>
+          
+        <!-- /.row -->
+
+        <!-- Project One -->
+<!--  <div class="row">
+        <div class="col-md-6">
+          <div class=" col-md-12 " data-toggle="collapse" data-target="#demo" *ngFor="let agency of agencies" (click)="onSelect(agency)"[class.selected]="agency === selectedagency">
+            <div class="col-md-12 well">
+                <h3>{{agency.nameAgency}}</h3>
+            <div class="col-md-3">
+                <p>{{agency.email}}</p>
+            </div>-->
+            <!--<button class="delete" (click)="delete(agency); $event.stopPropagation()"> x </button>-->
+            
+           <!-- <a [routerLink]="['/agency', agency._id]">agency details</a>
+            </div>
+          </div>
+        </div>--><!-- row -->
+<!--        <div class="col-md-6">
+            <div *ngIf="selectedAgency" id="demo" class="col-md-5 collapse">
+              <h2>
+                {{selectedAgency.nameAgency | uppercase}} is my agency
+              </h2>
+                <button (click)="gotoDetail()">View Details</button>
+                <button (click)="agencyIsSelected()">console view</button>
+                
+            </div>
+          </div> -->
+        <!-- /.row -->
+    </div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel-group" id="accordion" >
+
+    <div class="panel panel-default" *ngFor="let agency of agencies">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a  (click)="onSelect(agency)"   data-toggle="collapse" data-parent="#accordion" href="#{{agency._id}}">{{agency.nameAgency}}</a>
+        </h4>
+      </div>
+      <div id="{{agency._id}}" class="panel-collapse collapse">
+        <div class="panel-body"><app-agency-details [agencyToDetails]="selectedAgency" [user]="user"></app-agency-details></div>
+      </div>
+    </div>
+   </div>
+  </div>
+</div>
+<app-search-agency></app-search-agency>
+        

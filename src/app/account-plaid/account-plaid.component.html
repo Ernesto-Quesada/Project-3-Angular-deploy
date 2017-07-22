@@ -1,0 +1,22 @@
+<div class="row well">
+
+<p>
+  account-plaid works!
+</p>
+
+<div class="panel panel-success">
+  <div class="panel-heading">Accounts <button (click)="openLink()" class="pull-right">Select account</button></div>
+  <div class="panel-boby">
+
+    <button *ngFor="let account of  accountsUser" id={{account.account_id}} class="col-md-12">
+      {{account.name}} ${{account.balances.available}}
+      </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+    <div class="col-md-6">
+<h5>Profile Edition should be an angular call to show the form</h5>
+        <form class="form">
+            <div class="control-group form-group">
+                <div class="controls">
+                    <label for="firstNameInput"> first name </label>
+                    <input type="text" name="firstNameInput" [(ngModel)]="editInfo.firstNameInput" id="firstNameInput" class="form-control" placeholder="name" autofocus>
+                    <p class="help-block"></p>
+                </div>
+            </div>
+                <div class="form-group">
+                <label for="lastNameInput"> last name </label>
+                <input type="text" name="lastNameInput" [(ngModel)]="editInfo.lastNameInput" id="lastNameInput" class="form-control" placeholder="last name">
+            </div>
+
+            <!--<div class="form-group">
+              <label for="emailInput"> Your email </label>
+              <input type="email" disabled name="emailInput" [(ngModel)]="editInfo.emailInput" id="emailInput" class="form-control" placeholder="{{user.email}}">
+            </div>-->
+
+            <div class="form-group">
+              <label for="phoneInput"> Your phone </label>
+              <input type="phone" name="phoneInput" [(ngModel)]="editInfo.phoneInput" id="phoneInput" class="form-control" placeholder="phone">
+            </div>
+            <div class="form-group">
+              <label for="currentPassword"> Current Password</label>
+              <input type="password" name="currentPassword " [(ngModel)]="editInfo.currentPassword" class="form-control" placeholder="current password">
+            </div>
+            <div class="form-group">
+              <label for="editedPassword">New Password</label>
+              <input type="password" name="editedPassword " [(ngModel)]="editInfo.editedPassword" class="form-control" placeholder="new password">
+            </div>
+            <div class="form-group">
+              <label for="countryInput"> Country </label>
+              <input type="text" name="countryInput" [(ngModel)]="editInfo.countryInput" id="countryInput" class="form-control" placeholder="{country">
+            </div>
+            <div id="success"></div>
+            <!-- For success/fail messages -->
+            <button (click)="editProfile()" class="btn btn-primary">Done</button>
+            <button (click)="editProfile()" class="btn btn-primary">Done</button>
+
+        </form>
+        </div>

@@ -1,0 +1,14 @@
+.form-control-placeholder {
+  position: absolute;
+  top: 50px;
+  padding: 7px 0 0 13px;
+  pointer-events: none;
+  color: #aaa;
+  transition: all 200ms;
+}
+
+.form-control:focus + .form-control-placeholder {
+  color: #000;
+  font-size: 75%;
+  top: 33px;
+}
